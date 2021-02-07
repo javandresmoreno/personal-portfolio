@@ -1,0 +1,144 @@
+/* --------------- Custom Properties -----------------*/
+
+/* El selector root es la misma etiqueta html pero tiene mayor jerarquia */
+:root {
+  --darkest-blue: #243264;
+  --dark-blue: #1d3e8a;
+  --medium-blue: #2781c1;
+  --soft-blue: #7fbfea;
+  --yellow: #ece43c;
+  --orange: #f4b219;
+  --red: #e7323b;
+  --green: #69b42e;
+  --black: #444;
+  --white: #fff;
+}
+
+@font-face {
+  font-family: Neris-Light;
+  src: url("../fonts/Neris-Light.otf");
+}
+
+@font-face {
+  font-family: Neris-Light-Italic;
+  src: url("../fonts/Neris-LightItalic.otf");
+}
+
+@font-face {
+  font-family: Neris-Regular;
+  src: url("../fonts/Neris-Light.otf");
+}
+
+@font-face {
+  font-family: Neris-Regular-Italic;
+  src: url("../fonts/Neris-LightItalic.otf");
+}
+
+@font-face {
+  font-family: Neris-SemiBold;
+  src: url("../fonts/Neris-SemiBold.otf");
+}
+
+@font-face {
+  font-family: Neris-SemiBold-Italic;
+  src: url("../fonts/Neris-SemiBoldItalic.otf");
+}
+
+@font-face {
+  font-family: Neris-Bold;
+  src: url("../fonts/Neris-Black.otf");
+}
+
+@font-face {
+  font-family: Neris-Bold-Italic;
+  src: url("../fonts/Neris-BoldItalic.otf");
+}
+
+/* --------------- Reset -----------------*/
+
+html {
+  box-sizing: border-box;
+  font-family: Neris-Light, sans-serif;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* esta propiedad me quita el scroll horizontal 
+  sin importar el tamaño de la imagen*/
+  overflow-x: hidden;
+  color: var(--black);
+}
+
+a {
+  color: var(--medium-blue);
+  transition: all 0.5s ease-out;
+  font-size: 1.7rem;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3.5rem;
+  font-family: Neris-Bold;
+  color: var(--dark-blue);
+}
+
+h2 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+h4 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+h5 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+h6 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+/*Para hacer todas las imágenes responsivas
+con respecto a su contenedor*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  margin: 0;
+  font-size: 1.7rem;
+  line-height: 1.6;
+}
+
+/* --------------- Components -----------------*/
+
+/* --------------- Utilities -----------------*/
+
+.box-shadow {
+  box-shadow: 4px 16px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* --------------- Site Styles -----------------*/
