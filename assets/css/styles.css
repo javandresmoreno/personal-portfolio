@@ -251,6 +251,39 @@ p {
 
 /* ********** End Menu **********/
 
+/* ********** Progress Bar **********/
+
+progress {
+  width: 100%;
+  height: 1.5rem;
+  background-color: var(--soft-blue);
+}
+
+progress::-webkit-progress-bar {
+  background-color: var(--soft-blue);
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--medium-blue);
+}
+
+progress::-moz-progress-value {
+  background-color: var(--medium-blue);
+}
+
+.progress {
+  margin: 1rem auto;
+}
+
+.progress > p {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+/* ********** End Progress Bar **********/
+
 /* --------------- Utilities -----------------*/
 
 .box-shadow {
