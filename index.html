@@ -15,10 +15,12 @@
     <header class="header">
       <section class="container flex-box">
         <div class="logo">
-          <img
-            src="./assets/svg/logo_javandresmoreno-dark.svg"
-            alt="Logo Javier Moreno"
-          />
+          <a href="#inicio">
+            <img
+              src="./assets/svg/logo_javandresmoreno-dark.svg"
+              alt="Logo Javier Moreno"
+            />
+          </a>
         </div>
         <button class="menu-btn-mobile">
           <span>
@@ -68,9 +70,9 @@
         </aside>
       </article>
     </section>
-    <section id="acerca" class="about">
-      <article>
-        <aside class="sobre-mi">
+    <section id="acerca" class="about section container full-lg-screen">
+      <article class="text-justify">
+        <aside class="about-me text-center text-lg-right section">
           <h1>Javier Andrés Moreno T.</h1>
           <h5>Desarrollador <i>Frontend</i></h5>
         </aside>
@@ -98,7 +100,7 @@
           >, un programa élite que entrena talento top en
           <i>front-end, back-end y data-science</i> .
         </p>
-        <div>
+        <div class="text-center">
           <a
             href="./assets/pdf/Curriculum_Vitae_Web.pdf"
             target="_blank"
@@ -108,14 +110,14 @@
           >
         </div>
       </article>
-      <article>
+      <article class="text-center">
         <img
           class="profile-photo"
           src="/assets//images/foto_andres_cuadrado.jpg"
           alt="Foto Javier Moreno"
         />
       </article>
-      <article>
+      <!-- <article>
         <h2>Mis Habilidades</h2>
         <div class="progress">
           <p>
@@ -134,13 +136,53 @@
           </p>
           <progress value="80" min="0" max="100"></progress>
         </div>
-      </article>
+      </article> -->
     </section>
-    <section id="habilidades" class="skills">
-      <h2>Habilidades</h2>
+    <section id="habilidades" class="skills section bg-gray-light">
+      <div class="container full-lg-screen">
+        <h2 class="section-title">• Habilidades •</h2>
+        <article class="skills-card">
+          <i class="fas fa-laptop-code icons"></i>
+          <h3>Programación <i>Web</i></h3>
+          <p>
+            Desarrollo aplicaciones <i>web</i> en <i>Front-End</i> usando
+            <i>HTML5, CSS3</i> y<i>JavaScript</i>. También utilizo la librería
+            de <b>ReactJS</b> con <b>Redux</b>. Manejo de Git y Github&reg;
+          </p>
+        </article>
+        <article class="skills-card">
+          <i class="fas fa-object-group icons"></i>
+          <h3>Diseño <i>UI</i></h3>
+          <p>
+            Aptitud para maquetar interfaces <i>web</i> interactivas, en
+            softwares de maquetación.
+          </p>
+        </article>
+        <article class="skills-card">
+          <i class="fas fa-bezier-curve icons"></i>
+          <h3>Diseño Gráfico</h3>
+          <p>
+            Amplia experiencia en el manejo de softwares de diseño y edición
+            tales como Adobe Photoshop&reg;, Adobe Illustrator&reg;,
+            CorelDraw&reg; entre otros.
+          </p>
+        </article>
+        <article class="skills-card">
+          <i class="fas fa-camera-retro icons"></i>
+          <h3>Fotografía Publicitaria</h3>
+          <p>
+            Tecnólogo en Producción de Fotografía Publicitaria del
+            <a
+              href="https://www.youtube.com/watch?v=5UT-qu2-16c&t=2s"
+              target="_blank"
+              >CENIGRAF</a
+            >. Fotografía de Producto, Alimentos y Moda.
+          </p>
+        </article>
+      </div>
     </section>
-    <section id="portafolio" class="portfolio">
-      <h2>Portafolio</h2>
+    <section id="portafolio" class="portfolio section">
+      <a href="#trabajo-1" class="portfolio-card"></a>
     </section>
     <section id="signals" class="signals">
       <h2>Signals</h2>
