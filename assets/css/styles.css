@@ -3,12 +3,15 @@
 /* El selector root es la misma etiqueta html pero tiene mayor jerarquia */
 :root {
   --darkest-blue: #243264;
+  --darkest-blue-alpha: rgba(36, 50, 100, 0.8);
   --dark-blue: #1d3e8a;
   --medium-blue: #2781c1;
   --soft-blue: #7fbfea;
   --yellow: #ece43c;
   --orange: #f4b219;
+  --orange-alpha: rgba(244, 178, 25, 0.8);
   --red: #e7323b;
+  --red-alpha: rgba(231, 50, 59, 0.8);
   --green: #69b42e;
   --black: #444;
   --white: #fff;
@@ -400,6 +403,52 @@ progress::-moz-progress-value {
 
 .logo {
   width: 160px;
+}
+
+.portfolio-card {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio-card-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--darkest-blue-alpha);
+  color: var(--white);
+  padding: 1.8rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio-card:hover .portfolio-card-info {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.portfolio-card-info > div {
+  padding: 1.6rem;
+  border: thin solid var(--yellow);
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-card-info h3 {
+  text-align: center;
+}
+.portfolio-card-info p {
+  font-size: 1.4rem;
 }
 
 .skills-card {
