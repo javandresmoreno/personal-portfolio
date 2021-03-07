@@ -139,10 +139,23 @@ img {
 p {
   margin: 0;
   font-size: 1.7rem;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
-/* --------------- Components -----------------*/
+/* 
+
+Esta propiedad le dice al navegador
+que quiero que todos los elementos
+con el atributo ID tengan un scroll
+margin de 4 ex. las unidades ex son 
+para indicar la letra más alta del 
+alfabeto, la cual es la X
+
+[id] {
+  scroll-margin-top: 4ex;
+} */
+
+/* --------------- COMPONENTS -----------------*/
 
 /* ********** Start Hero Image **********/
 
@@ -254,7 +267,60 @@ p {
   }
 }
 
-/* ********** End Menu **********/
+/* ****************************/
+
+/* ********** Modal **********/
+
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--darkest-blue-alpha);
+  display: grid;
+  place-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.8s;
+}
+
+.modal-content {
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.modal-close i {
+  font-size: 3rem;
+  color: var(--orange);
+}
+
+/* 
+Forma para aplicar estilos a 
+un objeto en particular 
+
+.modal#trabajo-1:target {
+  opacity: 1;
+  pointer-events: auto;
+} */
+
+/* Selector de atributos []
+| el pipe le indica a css que
+cualquier id que comience con
+la palabra "trabajo"
+*/
+.modal[id|="trabajo"]:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ***************************/
 
 /* ********** Progress Bar **********/
 
@@ -408,6 +474,7 @@ progress::-moz-progress-value {
 .portfolio-card {
   position: relative;
   width: 100%;
+  height: 400px;
   margin: 0 auto;
   display: block;
 }
@@ -416,6 +483,7 @@ progress::-moz-progress-value {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  background-position: top right;
 }
 
 .portfolio-card-info {
@@ -446,9 +514,59 @@ progress::-moz-progress-value {
 
 .portfolio-card-info h3 {
   text-align: center;
+  color: var(--yellow);
+}
+
+.portfolio-card-info h4 {
+  margin-top: 2rem;
 }
 .portfolio-card-info p {
   font-size: 1.4rem;
+}
+
+.portfolio-details {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-auto-rows: 3rem;
+  margin-top: 1rem;
+}
+
+.portfolio-details small {
+  font-size: 1.5rem;
+}
+
+.portfolio-details b {
+  text-transform: uppercase;
+  color: var(--darkest-blue-alpha);
+}
+
+.portfolio-info {
+  align-self: center;
+}
+
+.portfolio-modal {
+  background-color: var(--white);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+.portfolio-modal h3 {
+  border-bottom: thin solid var(--orange);
+  padding: 1rem 0;
+  margin: 1.5rem auto;
+  color: var(--medium-blue);
+  font-family: Neris-SemiBold;
+  text-align: center;
+}
+.portfolio-modal img {
+  border-radius: 0.5rem;
+  max-height: 280px;
+  object-fit: contain;
+  /* Para centrar en eje X y Y */
+  background-position: top right;
+  align-self: center;
 }
 
 .skills-card {
@@ -474,13 +592,38 @@ progress::-moz-progress-value {
 
 /* -------- Media Query para Tablets ----------*/
 @media screen and (min-width: 768px) {
-  .hero-image-title {
-    font-size: 5rem;
-  }
   .btn {
     width: 250px;
     font-size: 2.5rem;
   }
+  .container > .section-title {
+    grid-column: span 2;
+  }
+  .hero-image-title {
+    font-size: 5rem;
+  }
+
+  .portfolio[id] {
+    scroll-margin-top: 11ex;
+  }
+
+  .portfolio > .container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  .portfolio-info {
+    margin-left: 2rem;
+  }
+  .portfolio-modal {
+    flex-direction: row;
+    max-width: 800px;
+  }
+
+  .portfolio-modal img {
+    width: 40%;
+  }
+
   .profile-photo {
     display: inline-block;
     border-radius: 50%;
@@ -491,9 +634,6 @@ progress::-moz-progress-value {
     grid-template-columns: repeat(2, 45%);
     justify-content: space-between;
     align-content: center;
-  }
-  .container > .section-title {
-    grid-column: span 2;
   }
 }
 /* -------- Media Query para Desktop ----------*/
@@ -508,7 +648,9 @@ progress::-moz-progress-value {
   .about-me > h1 {
     font-size: 3.5rem;
   }
-
+  .container > .section-title {
+    grid-column: span 3;
+  }
   .full-lg-screen {
     width: 100%;
     min-height: 100vh;
@@ -524,10 +666,10 @@ progress::-moz-progress-value {
     padding: 0.8rem;
     height: calc(var(--header-height) - 0.8rem);
   }
+  .portfolio > .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
   .skills > .container {
     grid-template-columns: repeat(3, 30%);
-  }
-  .container > .section-title {
-    grid-column: span 3;
   }
 }
