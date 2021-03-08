@@ -1,4 +1,6 @@
-/* --------------- Custom Properties -----------------*/
+/* --------------------------------------------/
+|              CUSTOM PROPERTIES 
+\* -------------------------------------------*/
 
 /* El selector root es la misma etiqueta html pero tiene mayor jerarquia */
 :root {
@@ -17,6 +19,7 @@
   --white: #fff;
   --gray-light: #f0f0f0;
   --alpha-color: rgba(36, 50, 100, 0.6);
+  --white-alpha-color: rgba(255, 255, 255, 0.6);
   --max-width: 1200px;
   --header-height: 8rem;
   --shadow-text: 2px 2px 8px rgba(0, 0, 0, 0.47);
@@ -63,7 +66,9 @@
   src: url("../fonts/Neris-BoldItalic.otf");
 }
 
-/* --------------- Reset -----------------*/
+/* --------------------------------------------/
+|                     RESET 
+\* -------------------------------------------*/
 
 html {
   box-sizing: border-box;
@@ -155,7 +160,166 @@ alfabeto, la cual es la X
   scroll-margin-top: 4ex;
 } */
 
-/* --------------- COMPONENTS -----------------*/
+/* --------------------------------------------/
+|                  COMPONENTS 
+\* -------------------------------------------*/
+
+/* ********** Carousel **********/
+
+@keyframes carousel-slide {
+  0% {
+    transform: translateX(-0%);
+  }
+  25% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  75% {
+    transform: translateX(-75%);
+  }
+}
+
+.carousel {
+  margin: 3rem auto;
+  padding: 2rem 0;
+  max-width: 800px;
+  text-align: center;
+  background-color: var(--carousel-bg-color);
+  overflow-x: hidden;
+}
+
+.carousel .slides {
+  /* Por cada slide debo sumar 
+  100% en el width, como tengo 4, 
+  serían 400%*/
+  width: 400%;
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  /* Para mover cada tarjeta 
+  del slider*/
+  transition: transform 0.5s ease-in-out;
+  animation: carousel-slide 12s ease-in-out 3s;
+}
+
+.carousel input {
+  display: none;
+}
+
+.carousel label {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin: 0 0.5rem;
+  border: 0.25rem solid var(--red);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* propiedad clave:
+el símbolo ~ significa que mueva 
+el hermano que tiene al lado */
+
+#slide-1:checked ~ .slides {
+  /* aquí se posiciona en su origen */
+  transform: translateX(0%);
+}
+
+#slide-2:checked ~ .slides {
+  /* el porcentaje se coloca de acuerdo
+  a la cantidad de slides dividido en 100.
+  como tengo 4 = 100/4 = 25, en negativo para
+  que se mueva hacía la izquierda */
+  transform: translateX(-25%);
+}
+
+#slide-3:checked ~ .slides {
+  transform: translateX(-50%);
+}
+
+#slide-4:checked ~ .slides {
+  transform: translateX(-75%);
+}
+
+/* Para rellenar cada input radio de
+acuerdo a su id */
+#slide-1:checked ~ .slides-nav label#dot-1,
+#slide-2:checked ~ .slides-nav label#dot-2,
+#slide-3:checked ~ .slides-nav label#dot-3,
+#slide-4:checked ~ .slides-nav label#dot-4 {
+  background-color: var(--yellow);
+}
+
+.slide blockquote {
+  font-size: 1.5rem;
+}
+
+/* *******************************/
+
+/* ********** Contact form **********/
+
+.contact-form {
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 800px;
+}
+
+.contact-form > * {
+  padding: 1rem;
+  margin: 1.5rem auto;
+  display: block;
+  width: 100%;
+  font-family: Neris-Regular;
+  font-size: 2rem;
+  color: var(--medium-blue);
+  outline: none;
+}
+
+.contact-form *::placeholder {
+  font-size: 1.3rem;
+  font-family: Neris-Light-Italic;
+  color: var(--soft-blue);
+}
+
+.contact-form input {
+  border: 0;
+  border-radius: 0.5rem;
+  border-bottom: thin solid var(--soft-blue);
+  padding-left: 0;
+}
+
+.contact-form textarea {
+  border-radius: 0.5rem;
+  border: thin solid var(--soft-blue);
+  resize: none;
+}
+
+.contact-form input[type="submit"] {
+  margin-top: 0;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+  text-align: center;
+}
+
+.contact-form input[type="submit"]:hover {
+  opacity: 0.75;
+}
+
+.modal#gracias:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.contact-form-response {
+  padding: 2rem;
+  width: 400px;
+  text-align: center;
+  background-color: var(--white);
+}
+
+/* *******************************/
 
 /* ********** Start Hero Image **********/
 
@@ -194,7 +358,7 @@ alfabeto, la cual es la X
   color: var(--yellow);
 }
 
-/* ********** End Hero Image **********/
+/* ************************************/
 
 /* ********** Start Menu **********/
 
@@ -355,7 +519,15 @@ progress::-moz-progress-value {
 
 /* ********** End Progress Bar **********/
 
-/* --------------- Utilities -----------------*/
+/* --------------------------------------------/
+|                   UTILITIES 
+\* -------------------------------------------*/
+
+.avatar-testimonials {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
 
 .bg-gray-light {
   background-color: var(--gray-light);
@@ -363,6 +535,10 @@ progress::-moz-progress-value {
 
 .box-shadow {
   box-shadow: 4px 16px 2px rgba(0, 0, 0, 0.25);
+}
+
+.box-shadow-1 {
+  box-shadow: 0.1rem 0.1rem 0.7rem rgba(0, 0, 0, 0.15);
 }
 
 .btn {
@@ -390,6 +566,11 @@ progress::-moz-progress-value {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.icon-image {
+  width: 20px;
+  margin-right: 10px;
 }
 
 .none {
@@ -420,6 +601,10 @@ progress::-moz-progress-value {
   text-align: center;
 }
 
+.text-first-color {
+  color: var(--darkest-blue);
+}
+
 .text-left {
   text-align: left;
 }
@@ -446,7 +631,9 @@ progress::-moz-progress-value {
   }
 }
 
-/* --------------- Site Styles -----------------*/
+/* --------------------------------------------/
+|                  SITE STYLES
+\* -------------------------------------------*/
 
 .about > article {
   margin-bottom: 2.5rem;
@@ -454,6 +641,21 @@ progress::-moz-progress-value {
 
 .about-me > h1 {
   font-size: 2.5rem;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem auto;
+  padding: 2rem;
+  width: 100%;
+}
+
+.contact-card > h3 {
+  color: var(--dark-blue);
+  margin-bottom: 1.75rem;
 }
 
 .header {
@@ -465,6 +667,24 @@ progress::-moz-progress-value {
   width: 100%;
   height: var(--header-height);
   background-color: var(--darkest-blue);
+}
+
+.footer {
+  margin-bottom: var(--header-height);
+  padding: 1rem;
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+.footer-content small {
+  font-size: 1.2rem;
+}
+
+.icons {
+  font-size: 4rem;
+  color: var(--medium-blue);
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
 }
 
 .logo {
@@ -583,24 +803,48 @@ progress::-moz-progress-value {
   margin-bottom: 1.75rem;
 }
 
-.icons {
-  font-size: 4rem;
-  color: var(--medium-blue);
-  margin-top: 1.75rem;
-  margin-bottom: 1.75rem;
+.social-media-icons i {
+  font-size: 3.5rem;
+  padding: 0 1rem;
+  color: var(--dark-blue);
 }
 
-/* -------- Media Query para Tablets ----------*/
+/* --------------------------------------------/
+|           MEDIA QUERY PARA TABLETS
+\* -------------------------------------------*/
+
 @media screen and (min-width: 768px) {
   .btn {
     width: 250px;
     font-size: 2.5rem;
   }
+
+  .contact[id] {
+    scroll-margin-top: 11ex;
+  }
+
+  .contact-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    justify-content: space-between;
+  }
+
   .container > .section-title {
     grid-column: span 2;
   }
+
   .hero-image-title {
     font-size: 5rem;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-content small {
+    font-size: 1.5rem;
   }
 
   .portfolio[id] {
@@ -636,7 +880,11 @@ progress::-moz-progress-value {
     align-content: center;
   }
 }
-/* -------- Media Query para Desktop ----------*/
+
+/* --------------------------------------------/
+|           MEDIA QUERY PARA DESKTOP
+\* -------------------------------------------*/
+
 @media screen and (min-width: 1024px) {
   .about {
     display: grid;
@@ -648,8 +896,16 @@ progress::-moz-progress-value {
   .about-me > h1 {
     font-size: 3.5rem;
   }
+
+  .contact-cards {
+    grid-template-columns: repeat(4, 24%);
+  }
+
   .container > .section-title {
     grid-column: span 3;
+  }
+  .footer {
+    margin-bottom: 0;
   }
   .full-lg-screen {
     width: 100%;
