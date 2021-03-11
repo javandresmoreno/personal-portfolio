@@ -200,7 +200,7 @@
     <!-----------------------  SKILLS  ------------------------------>
 
     <section id="habilidades" class="skills section bg-gray-light">
-      <div class="container full-lg-screen">
+      <div class="container full-lg-screen container-skills">
         <h2 class="section-title">• Habilidades •</h2>
         <article class="skills-card">
           <i class="fas fa-laptop-code icons"></i>
@@ -270,19 +270,18 @@
             </div>
           </aside>
         </a>
-        <a href="#trabajo-3" class="portfolio-card">
+        <a href="#trabajo-4" class="portfolio-card">
           <img
-            src="./assets/svg/event-app-14.svg"
-            alt="Event App de creación de Eventos"
+            src="https://cdn.pixabay.com/photo/2017/08/10/04/15/android-2618093_960_720.jpg"
+            alt="Clon de Spotify"
           />
           <aside class="portfolio-card-info">
             <div>
-              <h3>EventApp • App de Creación de Eventos</h3>
+              <h3>Clon de Spotify</h3>
               <h4>Stack Usado:</h4>
               <p>
-                React (Components) Amazon S3 (Storage) Digital Ocean (deploy)
-                Nodejs (Server) ExpressJs (Server) MongoDB (Database) JWT
-                (Authentications)
+                <b>Maquetación:</b> HTML5 • CSS3 <br />
+                Python, Django, Flask, Docker <br />
               </p>
             </div>
           </aside>
@@ -306,22 +305,6 @@
           </aside>
         </a>
 
-        <a href="#trabajo-4" class="portfolio-card">
-          <img
-            src="https://cdn.pixabay.com/photo/2017/08/10/04/15/android-2618093_960_720.jpg"
-            alt="Clon de Spotify"
-          />
-          <aside class="portfolio-card-info">
-            <div>
-              <h3>Clon de Spotify</h3>
-              <h4>Stack Usado:</h4>
-              <p>
-                <b>Maquetación:</b> HTML5 • CSS3 <br />
-                Python, Django, Flask, Docker <br />
-              </p>
-            </div>
-          </aside>
-        </a>
         <a href="#trabajo-5" class="portfolio-card">
           <img
             src="./assets/svg/daily-task-15.svg"
@@ -345,6 +328,23 @@
               <h3>Web Components JS Vanilla</h3>
               <h4>Stack Usado:</h4>
               <p>HTML5, CSS3, JavaScript y Web Components <br /></p>
+            </div>
+          </aside>
+        </a>
+        <a href="#trabajo-3" class="portfolio-card">
+          <img
+            src="./assets/svg/event-app-14.svg"
+            alt="Event App de creación de Eventos"
+          />
+          <aside class="portfolio-card-info">
+            <div>
+              <h3>EventApp • App de Creación de Eventos</h3>
+              <h4>Stack Usado:</h4>
+              <p>
+                React (Components) Amazon S3 (Storage) Digital Ocean (deploy)
+                Nodejs (Server) ExpressJs (Server) MongoDB (Database) JWT
+                (Authentications)
+              </p>
             </div>
           </aside>
         </a>
@@ -699,6 +699,48 @@
     <section id="contacto" class="contact section full-lg-screen">
       <div class="container"></div>
       <h2 class="section-title">¡Contáctame!</h2>
+
+      <form class="contact-form box-shadow-1">
+        <input
+          type="text"
+          name="name"
+          placeholder="Ingresa tu nombre *"
+          title="Nombre sólo acepta letras y espacios en blanco."
+          pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Ingresa tu correo *"
+          title="e-mail incorrecto"
+          pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+          required
+        />
+        <textarea
+          name="comments"
+          cols="50"
+          rows="10"
+          placeholder="Déjame tus comentarios *"
+          required
+        ></textarea>
+        <div class="contact-form-loader text-center none">
+          <img src="./assets/svg/loader.svg" alt="Enviando..." />
+        </div>
+        <div class="text-center">
+          <input class="btn" type="submit" value="Enviar Mensaje" />
+        </div>
+      </form>
+      <article id="gracias" class="modal">
+        <div class="modal-content">
+          <article class="contact-form-response">
+            <h3 class="text-first-color">
+              ¡Muchas Gracias por tus comentarios!
+            </h3>
+            <span class="icons">😉</span>
+          </article>
+        </div>
+      </article>
       <article class="contact-cards">
         <aside class="contact-card box-shadow-1">
           <i class="fas fa-map-marker-alt icons"></i>
@@ -750,47 +792,6 @@
             ></a>
           </small>
         </aside>
-      </article>
-      <form class="contact-form box-shadow-1">
-        <input
-          type="text"
-          name="name"
-          placeholder="Ingresa tu nombre *"
-          title="Nombre sólo acepta letras y espacios en blanco."
-          pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Ingresa tu correo *"
-          title="e-mail incorrecto"
-          pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
-          required
-        />
-        <textarea
-          name="comments"
-          cols="50"
-          rows="10"
-          placeholder="Déjame tus comentarios *"
-          required
-        ></textarea>
-        <div class="contact-form-loader text-center none">
-          <img src="./assets/svg/loader.svg" alt="Enviando..." />
-        </div>
-        <div class="text-center">
-          <input class="btn" type="submit" value="Enviar Mensaje" />
-        </div>
-      </form>
-      <article id="gracias" class="modal">
-        <div class="modal-content">
-          <article class="contact-form-response">
-            <h3 class="text-first-color">
-              ¡Muchas Gracias por tus comentarios!
-            </h3>
-            <span class="icons">😉</span>
-          </article>
-        </div>
       </article>
     </section>
     <footer class="footer">

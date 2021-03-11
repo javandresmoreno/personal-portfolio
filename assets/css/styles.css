@@ -905,6 +905,11 @@ progress::-moz-progress-value {
   .container > .section-title {
     grid-column: span 3;
   }
+
+  .container-skills > .section-title {
+    grid-column: span 2;
+  }
+
   .footer {
     margin-bottom: 0;
   }
@@ -926,7 +931,12 @@ progress::-moz-progress-value {
   .portfolio > .container {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .skills-card {
+    height: 250px;
+  }
+
   .skills > .container {
-    grid-template-columns: repeat(3, 30%);
+    grid-template-columns: repeat(2, 45%);
   }
 }
