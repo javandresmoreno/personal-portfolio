@@ -12,13 +12,25 @@
     <title>Javier Moreno Portfolio</title>
     <meta
       name="description"
-      content="Hola, bienvenid@ a mi Portafolio Profesional como Frontend Developer. Soy Javier Moreno, Frontend Developer"
+      content="Hola, bienvenid@ a mi Portafolio Profesional como Frontend Developer."
     />
-    <link rel="canonical" href="ruta-absoluta" />
-    <link rel="favicon" href="ruta-absoluta/assets/images/favicon-16x16.png" />
+    <link rel="canonical" href="https://javandresmoreno.com/" />
+    <link rel="favicon" href="favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/images/favicon-16x16.png"
+    />
     <link
       rel="apple-touch-icon"
-      href="ruta-absoluta/assets/images/apple-touch-icon.png"
+      href="https://javandresmoreno.github.io/personal-portfolio/assets/images/apple-touch-icon.png"
     />
     <meta name="theme-color" content="#1d3e8a" />
     <meta name="twitter:card" content="summary" />
@@ -30,13 +42,17 @@
     <meta
       name="twitter:image"
       property="og:image"
-      content="ruta-absoluta/assets/images/favicon-32x32.png"
+      content="https://javandresmoreno.github.io/personal-portfolio/assets/images/foto_andres_cuadrado.jpg"
     />
-    <meta name="twitter:url" property="og:url" content="ruta-absoluta" />
+    <meta
+      name="twitter:url"
+      property="og:url"
+      content="https://javandresmoreno.com"
+    />
     <meta
       name="twitter:description"
       property="og:description"
-      content="Hola, bienvenid@ a mi Portafolio Profesional como Frontend Developer. Soy Javier Moreno, Frontend Developer"
+      content="Hola, bienvenid@ a mi Portafolio Profesional como Frontend Developer."
     />
     <meta property="og:type" content="website" />
   </head>
@@ -66,7 +82,7 @@
           <a href="#acerca">Sobre mí</a>
           <a href="#habilidades">Habilidades</a>
           <a href="#portafolio">Portafolio</a>
-          <a href="#testimonios">Testimonios</a>
+          <!-- <a href="#testimonios">Testimonios</a> -->
           <a href="#contacto">Contacto</a>
         </nav>
       </section>
@@ -77,13 +93,13 @@
       <article
         class="hero-image"
         style="
-          --hero-image: url('/assets/images/hero.jpg');
+          --hero-image: url('https://javandresmoreno.github.io/personal-portfolio/assets/images/hero.jpg');
           --hero-attachment: fixed;
         "
       >
         <aside
           class="hero-image-opacity"
-          style="--hero-opacity-color: var(--alpha-color)"
+          style="--hero-opacity-color: var(--black-alpha-color)"
         >
           <div class="hero-image-content">
             <h2
@@ -102,7 +118,7 @@
       </article>
     </section>
 
-    <!----------------------- ABUOUT ME  ------------------------------>
+    <!----------------------- ABOUT ME  ------------------------------>
 
     <section id="acerca" class="about section container full-lg-screen">
       <article class="text-justify">
@@ -111,18 +127,16 @@
           <h5>Desarrollador <i>Frontend</i></h5>
         </aside>
         <p>
-          Como Desarrollador <i>Frontend</i>, disfruto llevar a cabo la
-          maquetación e interactividad de interfaces <i>web</i>. Me considero un
-          desarrollador enfocado en la satisfacción del usuario, en la
-          colaboración con los equipos de trabajo y en estar constantemente
-          capacitándome en mejorar mis habilidades técnicas y blandas.
+          Disfruto llevar a cabo la maquetación e interactividad de Interfaces
+          <i>Web</i>. Me considero un desarrollador enfocado en la satisfacción
+          del usuario, en la colaboración con equipos de trabajo y en estar
+          constantemente capacitándome en mejorar mis habilidades técnicas y
+          blandas.
         </p>
 
         <p>
-          Cuento con experiencia en el área de la publicidad y las artes
-          gráficas por más de 20 años, a través de mi tiempo como emprendedor en
-          <a href="http://solido.co" target="_blank"><strong>SOLIDO</strong></a
-          >. En la actualidad soy del 0.10% de seleccionados que participa en
+          Cuento con experiencia en el área de la publicidad y artes gráficas
+          por más de 20 años, a través de mi tiempo como emprendedor. Hice parte de 
           <strong
             ><i
               ><a
@@ -131,8 +145,8 @@
                 >Platzi Master</a
               ></i
             ></strong
-          >, un programa élite que entrena talento top en
-          <i>front-end, back-end y data-science</i> .
+          >, un programa élite en Latinoamérica, que entrena talento top en
+          tecnologías <i>front-end, back-end y data-science</i> .
         </p>
         <div class="text-center">
           <a
@@ -147,7 +161,7 @@
       <article class="text-center">
         <img
           class="profile-photo"
-          src="/assets//images/foto_andres_cuadrado.jpg"
+          src="./assets//images/foto_andres_cuadrado.jpg"
           alt="Foto Javier Moreno"
         />
       </article>
@@ -181,7 +195,7 @@
     <!-----------------------  SKILLS  ------------------------------>
 
     <section id="habilidades" class="skills section bg-gray-light">
-      <div class="container full-lg-screen">
+      <div class="container full-lg-screen container-skills">
         <h2 class="section-title">• Habilidades •</h2>
         <article class="skills-card">
           <i class="fas fa-laptop-code icons"></i>
@@ -251,37 +265,18 @@
             </div>
           </aside>
         </a>
-        <a href="#trabajo-2" class="portfolio-card">
+        <a href="#trabajo-7" class="portfolio-card">
           <img
-            src="./assets/images/arroz-paisa-1.jpg"
-            alt="Menú Digital Arroz Paisa"
+            src="./assets/images/desktop-preview.jpg"
+            alt="Ip address and Domain Tracker"
           />
           <aside class="portfolio-card-info">
             <div>
-              <h3>Menú Digital Arroz Paisa Rexton</h3>
+              <h3>App de Consulta de Direcciones IP y Dominios</h3>
               <h4>Stack Usado:</h4>
               <p>
-                Responsive Design <br />
-                CSS Grid - Flexbox <br />
-                Git, Github. <br />
-                Deploy en Vercel.
-              </p>
-            </div>
-          </aside>
-        </a>
-        <a href="#trabajo-3" class="portfolio-card">
-          <img
-            src="./assets/svg/event-app-14.svg"
-            alt="Event App de creación de Eventos"
-          />
-          <aside class="portfolio-card-info">
-            <div>
-              <h3>EventApp • App de Creación de Eventos</h3>
-              <h4>Stack Usado:</h4>
-              <p>
-                React (Components) Amazon S3 (Storage) Digital Ocean (deploy)
-                Nodejs (Server) ExpressJs (Server) MongoDB (Database) JWT
-                (Authentications)
+                HTML5, CSS3: Semantic Elements, CSS Grid, Flexbox <br />
+                <b>JavaScript Vanilla</b>
               </p>
             </div>
           </aside>
@@ -302,6 +297,25 @@
             </div>
           </aside>
         </a>
+        <a href="#trabajo-2" class="portfolio-card">
+          <img
+            src="./assets/images/arroz-paisa-1.jpg"
+            alt="Menú Digital Arroz Paisa"
+          />
+          <aside class="portfolio-card-info">
+            <div>
+              <h3>Menú Digital Arroz Paisa Rexton</h3>
+              <h4>Stack Usado:</h4>
+              <p>
+                Responsive Design <br />
+                CSS Grid - Flexbox <br />
+                Git, Github. <br />
+                Deploy en Vercel.
+              </p>
+            </div>
+          </aside>
+        </a>
+
         <a href="#trabajo-5" class="portfolio-card">
           <img
             src="./assets/svg/daily-task-15.svg"
@@ -325,6 +339,36 @@
               <h3>Web Components JS Vanilla</h3>
               <h4>Stack Usado:</h4>
               <p>HTML5, CSS3, JavaScript y Web Components <br /></p>
+            </div>
+          </aside>
+        </a>
+        <a href="#trabajo-3" class="portfolio-card">
+          <img
+            src="./assets/svg/event-app-14.svg"
+            alt="Event App de creación de Eventos"
+          />
+          <aside class="portfolio-card-info">
+            <div>
+              <h3>EventApp • App de Creación de Eventos</h3>
+              <h4>Stack Usado:</h4>
+              <p>
+                React (Components) Amazon S3 (Storage) Digital Ocean (deploy)
+                Nodejs (Server) ExpressJs (Server) MongoDB (Database) JWT
+                (Authentications)
+              </p>
+            </div>
+          </aside>
+        </a>
+        <a href="#trabajo-8" class="portfolio-card">
+          <img
+            src="./assets/svg/pai_logo.svg"
+            alt="Event App de creación de Eventos"
+          />
+          <aside class="portfolio-card-info">
+            <div>
+              <h3>PAI Maquetación Páginas</h3>
+              <h4>Stack Usado:</h4>
+              <p>HTML5 - CSS3 Vanilla</p>
             </div>
           </aside>
         </a>
@@ -358,10 +402,7 @@
               <small>E-commerce</small>
               <small><b>Enlace:</b></small>
               <small
-                ><a
-                  href="https://javandresmoreno.github.io/Bootstrap-web-site-practice/"
-                  target="_blank"
-                  rel="noopener"
+                ><a href="https://zzardin.com" target="_blank" rel="noopener"
                   >zzardin.com</a
                 ></small
               >
@@ -573,9 +614,82 @@
         </article>
       </div>
     </article>
+    <article class="modal" id="trabajo-7">
+      <div class="modal-content">
+        <a href="#cerrar" class="modal-close">
+          <i class="fas fa-times-circle"></i>
+        </a>
+        <article class="portfolio-modal">
+          <img
+            src="./assets/images/desktop-preview.jpg"
+            alt="IP Address and Domains Tracker"
+          />
+          <div class="portfolio-info">
+            <h3>IP ADDRESS & DOMAINS TRACKER</h3>
+            <p>
+              Proyecto para consumir las API's de
+              <a href="https://geo.ipify.org/">geo.ipify.org/</a>, mostrando la
+              información ingresada en un mapa facilitado por la API de
+              <a href="https://leafletjs.com/">LeafletJs</a>.
+            </p>
+            <aside class="portfolio-details">
+              <small><b>Proyecto:</b></small>
+              <small>App de Consulta de Direcciones IP y Dominios</small>
+              <small><b>Fecha:</b></small>
+              <small>04/2021</small>
+              <small><b>Tipo:</b></small>
+              <small>Consumo de API'S</small>
+              <small><b>Enlace:</b></small>
+              <small
+                ><a
+                  href="https://ip-address-tracker-liart.vercel.app/"
+                  target="_blank"
+                  rel="noopener"
+                  >Vista</a
+                ></small
+              >
+            </aside>
+          </div>
+        </article>
+      </div>
+    </article>
+    <article class="modal" id="trabajo-8">
+      <div class="modal-content">
+        <a href="#cerrar" class="modal-close">
+          <i class="fas fa-times-circle"></i>
+        </a>
+        <article class="portfolio-modal">
+          <img
+            src="./assets/images/barre_tribe.jpg"
+            alt="Pai Latam Subscriptions Page"
+          />
+          <div class="portfolio-info">
+            <h3>PAI Latam</h3>
+            <p>Ejercicio de Maquetación en HTML5 y CSS3.</p>
+            <aside class="portfolio-details">
+              <small><b>Proyecto:</b></small>
+              <small>Páginas de subscripciones</small>
+              <small><b>Fecha:</b></small>
+              <small>05/2021</small>
+              <small><b>Tipo:</b></small>
+              <small>Maquetación y Estilos</small>
+              <small><b>Enlace:</b></small>
+              <small
+                ><a
+                  href="https://javandresmoreno.github.io/pai-subscriptions/"
+                  target="_blank"
+                  rel="noopener"
+                  >Vista</a
+                ></small
+              >
+            </aside>
+          </div>
+        </article>
+      </div>
+    </article>
 
     <!----------------------- TESTIMONIALS SLIDER WITH CSS ------------------------------>
-
+    <!-- 
     <section id="testimonios" class="testimonials">
       <article
         class="hero-image"
@@ -670,7 +784,7 @@
           </div>
         </aside>
       </article>
-    </section>
+    </section> -->
 
     <!----------------------- END TESTIMONIALS SLIDER WITH CSS ------------------------------>
 
@@ -679,58 +793,7 @@
     <section id="contacto" class="contact section full-lg-screen">
       <div class="container"></div>
       <h2 class="section-title">¡Contáctame!</h2>
-      <article class="contact-cards">
-        <aside class="contact-card box-shadow-1">
-          <i class="fas fa-map-marker-alt icons"></i>
-          <h3>Ubicación</h3>
-          <p>Bogotá, Colombia</p>
-        </aside>
-        <aside class="contact-card box-shadow-1">
-          <i class="fas fa-mobile-alt icons"></i>
-          <h3>Teléfono</h3>
-          <p>
-            <img
-              src="./assets/images/co-flag-icon.png"
-              alt="Colombia, Surámerica"
-              class="icon-image"
-            />
-            <a href="tel:3002104575"><small>+57</small> 300 210 4575</a>
-          </p>
-        </aside>
-        <aside class="contact-card box-shadow-1">
-          <i class="fas fa-envelope-open-text icons"></i>
-          <h3>E-mail</h3>
-          <p>
-            <a href="mailto:javandresmoreno@gmail.com"
-              >javandresmoreno@gmail.com</a
-            >
-          </p>
-        </aside>
-        <aside class="contact-card box-shadow-1">
-          <i class="fas fa-hashtag icons"></i>
-          <h3>Redes Sociales</h3>
-          <small class="social-media-icons">
-            <a
-              href="https://github.com/javandresmoreno"
-              target="_blank"
-              rel="noopener"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a
-              href="https://www.linkedin.com/in/javandresmoreno"
-              target="_blank"
-              rel="noopener"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-            <a
-              href="https://twitter.com/javandresmoreno"
-              target="_blank"
-              rel="noopener"
-              ><i class="fab fa-twitter"></i
-            ></a>
-          </small>
-        </aside>
-      </article>
+
       <form class="contact-form box-shadow-1">
         <input
           type="text"
@@ -772,11 +835,63 @@
           </article>
         </div>
       </article>
+      <article class="contact-cards">
+        <aside class="contact-card box-shadow-1">
+          <i class="fas fa-map-marker-alt icons"></i>
+          <h3>Ubicación</h3>
+          <p>Bogotá, Colombia</p>
+        </aside>
+        <aside class="contact-card box-shadow-1">
+          <i class="fas fa-mobile-alt icons"></i>
+          <h3>Teléfono</h3>
+          <p>
+            <img
+              src="./assets/images/co-flag-icon.png"
+              alt="Colombia, Surámerica"
+              class="icon-image"
+            />
+            <a href="tel:3002104575"><small>+57</small> 300 210 4575</a>
+          </p>
+        </aside>
+        <aside class="contact-card box-shadow-1">
+          <i class="fas fa-envelope-open-text icons"></i>
+          <h3>E-mail</h3>
+          <p>
+            <a href="mailto:hola@javandresmoreno.com"
+              >hola@javandresmoreno.com</a
+            >
+          </p>
+        </aside>
+        <aside class="contact-card box-shadow-1">
+          <i class="fas fa-hashtag icons"></i>
+          <h3>Redes Sociales</h3>
+          <small class="social-media-icons">
+            <a
+              href="https://github.com/javandresmoreno"
+              target="_blank"
+              rel="noopener"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/javandresmoreno"
+              target="_blank"
+              rel="noopener"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="https://twitter.com/javandresmoreno"
+              target="_blank"
+              rel="noopener"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </small>
+        </aside>
+      </article>
     </section>
     <footer class="footer">
       <div class="container footer-content text-center">
         <div>
-          <small> &copy; Copyright. 2021 &nbsp &nbsp</small>
+          <small> &copy; Copyright. 2023 &nbsp &nbsp</small>
           <span>
             <img
               src="./assets/svg/logo_javandresmoreno-dark.svg"
